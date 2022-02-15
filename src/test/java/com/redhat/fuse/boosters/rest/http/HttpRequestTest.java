@@ -1,5 +1,7 @@
 package com.redhat.fuse.boosters.rest.http;
 
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +28,6 @@ public class HttpRequestTest {
 
     @Test
     public void healthShouldReturnOkMessage() throws Exception {
-        Assert.assertEquals( "{\"status\":\"UP\"}", this.restTemplate.getForObject("http://localhost:" + port + "/actuator/health", String.class));
+        Assert.assertEquals("UP", this.restTemplate.getForObject("http://localhost:" + port + "/actuator/health", Map.class).get("status"));
     }
 }
