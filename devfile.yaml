@@ -39,7 +39,7 @@ commands:
     exec:
       component: tools
       workingDir: ${PROJECTS_ROOT}/fuse-rest-http-booster
-      commandLine: MAVEN_OPTS='-Xmx200m' && mvn clean package
+      commandLine: "mvn clean package"
       group:
         kind: build
   - id: run
