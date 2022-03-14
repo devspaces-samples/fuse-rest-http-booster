@@ -4,7 +4,7 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/codeready-workspaces/plugin-java8-rhel8
+      image: registry.redhat.io/codeready-workspaces/plugin-java11-rhel8
       env:
         - name: JAVA_OPTS
           value: "-XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
@@ -71,6 +71,6 @@ commands:
     exec:
       component: tools
       workingDir: ${PROJECTS_ROOT}/fuse-rest-http-booster
-      commandLine: "mvn fabric8:deploy -Popenshift -DskipTests"
+      commandLine: "mvn oc:deploy -Popenshift -DskipTests"
       group:
         kind: run
