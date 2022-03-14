@@ -71,6 +71,6 @@ commands:
     exec:
       component: tools
       workingDir: ${PROJECTS_ROOT}/fuse-rest-http-booster
-      commandLine: "mvn fabric8:deploy -Popenshift -DskipTests"
+      commandLine: "mvn oc:deploy -Popenshift -DskipTests"
       group:
         kind: run
