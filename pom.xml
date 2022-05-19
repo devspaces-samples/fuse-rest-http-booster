@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <fuse.bom.version>7.10.0.fuse-sb2-7_10_0-00014-redhat-00001</fuse.bom.version>
-        <docker.image.version>registry.redhat.io/fuse7/fuse-java-openshift-rhel8:1.10</docker.image.version>
+        <docker.image.version>registry.redhat.io/fuse7/fuse-java-openshift-jdk11-rhel8:1.10</docker.image.version>
     </properties>
 
     <dependencyManagement>
